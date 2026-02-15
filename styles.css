@@ -1,0 +1,183 @@
+:root {
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --text: #1d2433;
+  --accent: #2b6df5;
+  --accent-hover: #1d57c7;
+  --border: #d8dfec;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f8fbff 0%, #eef3fb 100%);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+h1 {
+  margin-top: 0;
+  grid-column: 1 / -1;
+}
+
+.home-title {
+  text-align: center;
+}
+
+.song-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 8px 24px rgba(21, 37, 71, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.song-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(21, 37, 71, 0.14);
+}
+
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.controls input {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.controls button,
+.back {
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 14px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back.exit {
+  border-color: #cc2f2f;
+  background: #cc2f2f;
+}
+
+.controls button:hover,
+.back:not(.exit):hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.back.exit:hover {
+  border-color: #a12626;
+  background: #a12626;
+}
+
+.lyrics {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 16px 120px;
+}
+
+.song-title {
+  margin: 0 0 16px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.8;
+  font-size: 1.15rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(21, 37, 71, 0.06);
+}
+
+.lyrics-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.lyrics-stack img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(21, 37, 71, 0.06);
+}
+
+.home-footer {
+  margin-top: 24px;
+  height: 56px;
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .controls {
+    gap: 8px;
+  }
+
+  .controls input {
+    width: 58px;
+  }
+
+  pre {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+}

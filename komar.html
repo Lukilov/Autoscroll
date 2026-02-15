@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komar - AutoScroll</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="controls" role="region" aria-label="Auto scroll kontrole">
+    <a class="back exit" href="index.html">X</a>
+    <label>
+      Min
+      <input id="minutes" type="number" min="0" value="2" />
+    </label>
+    <label>
+      Sek
+      <input id="seconds" type="number" min="0" max="59" value="30" />
+    </label>
+    <button id="startBtn" type="button">Start</button>
+    <button id="pauseBtn" type="button">Pavza</button>
+    <button id="resetBtn" type="button">Reset</button>
+    <div class="nav-actions" aria-label="Navigacija pesmi">
+      <a class="back" href="najlepse-pesmi.html">Prejšnja</a>
+      <a class="back" href="ko-pa-prides-ti.html">Naslednja</a>
+    </div>
+  </header>
+
+  <main class="lyrics" id="lyrics">
+    <h1 class="song-title">Komar</h1>
+    <section class="lyrics-stack" aria-label="Komar v slikah">
+      <img src="Pesmi/Komar1.png" alt="Komar 1" />
+      <img src="Pesmi/Komar2.png" alt="Komar 2" />
+      <img src="Pesmi/Komar3.png" alt="Komar 3" />
+      <img src="Pesmi/Komar4.png" alt="Komar 4" />
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

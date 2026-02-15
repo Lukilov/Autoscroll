@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Za dobra stara vremena - AutoScroll</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="controls" role="region" aria-label="Auto scroll kontrole">
+    <a class="back exit" href="index.html">X</a>
+    <label>
+      Min
+      <input id="minutes" type="number" min="0" value="2" />
+    </label>
+    <label>
+      Sek
+      <input id="seconds" type="number" min="0" max="59" value="30" />
+    </label>
+    <button id="startBtn" type="button">Start</button>
+    <button id="pauseBtn" type="button">Pavza</button>
+    <button id="resetBtn" type="button">Reset</button>
+    <div class="nav-actions" aria-label="Navigacija pesmi">
+      <a class="back" href="ko-pa-prides-ti.html">Prejšnja</a>
+      <a class="back" href="rad-bi-ti-rekel-nekaj-lepega.html">Naslednja</a>
+    </div>
+  </header>
+
+  <main class="lyrics" id="lyrics">
+    <h1 class="song-title">Za dobra stara vremena</h1>
+    <section class="lyrics-stack" aria-label="Za dobra stara vremena v slikah">
+      <img src="Pesmi/Ramena1.png" alt="Za dobra stara vremena 1" />
+      <img src="Pesmi/Ramena2.png" alt="Za dobra stara vremena 2" />
+      <img src="Pesmi/Ramena3.png" alt="Za dobra stara vremena 3" />
+      <img src="Pesmi/Ramena4.png" alt="Za dobra stara vremena 4" />
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

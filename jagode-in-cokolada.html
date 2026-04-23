@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jagode in čokolada - AutoScroll</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="controls" role="region" aria-label="Auto scroll kontrole">
+    <a class="back exit" href="index.html">X</a>
+    <label>
+      Min
+      <input id="minutes" type="number" min="0" value="2" />
+    </label>
+    <label>
+      Sek
+      <input id="seconds" type="number" min="0" max="59" value="30" />
+    </label>
+    <button id="startBtn" type="button">Start</button>
+    <button id="pauseBtn" type="button">Pavza</button>
+    <button id="resetBtn" type="button">Reset</button>
+    <div class="nav-actions" aria-label="Navigacija pesmi">
+      <a class="back" href="voljim-osmjeh-tvoj.html">Prejšnja</a>
+      <a class="back" href="ako-su-to-samo-bile-lazi.html">Naslednja</a>
+    </div>
+  </header>
+
+  <main class="lyrics" id="lyrics">
+    <h1 class="song-title">Jagode in čokolada</h1>
+    <p class="song-note">Banka 2, register 1, iz A.</p>
+    <section class="lyrics-stack" aria-label="Jagode in čokolada v slikah">
+      <img src="Pesmi/jagode1.png" alt="Jagode in čokolada 1" />
+      <img src="Pesmi/jagode2.png" alt="Jagode in čokolada 2" />
+      <img src="Pesmi/jagode3.png" alt="Jagode in čokolada 3" />
+      <img src="Pesmi/jagode4.png" alt="Jagode in čokolada 4" />
+      <img src="Pesmi/jagode5.png" alt="Jagode in čokolada 5" />
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

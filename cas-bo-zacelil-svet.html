@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Čas bo zacelil svet - AutoScroll</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="controls" role="region" aria-label="Auto scroll kontrole">
+    <a class="back exit" href="index.html">X</a>
+    <label>
+      Min
+      <input id="minutes" type="number" min="0" value="2" />
+    </label>
+    <label>
+      Sek
+      <input id="seconds" type="number" min="0" max="59" value="30" />
+    </label>
+    <button id="startBtn" type="button">Start</button>
+    <button id="pauseBtn" type="button">Pavza</button>
+    <button id="resetBtn" type="button">Reset</button>
+    <div class="nav-actions" aria-label="Navigacija pesmi">
+      <a class="back" href="moja-mama-je-strela.html">Prejšnja</a>
+      <a class="back" href="stara-dobra.html">Naslednja</a>
+    </div>
+  </header>
+
+  <main class="lyrics" id="lyrics">
+    <h1 class="song-title">Čas bo zacelil svet</h1>
+    <p class="song-note">Banka 2, register 8.</p>
+    <section class="lyrics-stack" aria-label="Čas bo zacelil svet v slikah">
+      <img src="Pesmi/cas1.png" alt="Čas bo zacelil svet 1" />
+      <img src="Pesmi/cas2.png" alt="Čas bo zacelil svet 2" />
+      <img src="Pesmi/cas3.png" alt="Čas bo zacelil svet 3" />
+      <img src="Pesmi/cas4.png" alt="Čas bo zacelil svet 4" />
+      <img src="Pesmi/cas5.png" alt="Čas bo zacelil svet 5" />
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

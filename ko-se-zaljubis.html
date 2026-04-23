@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ko se zaljubiš - AutoScroll</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="controls" role="region" aria-label="Auto scroll kontrole">
+    <a class="back exit" href="index.html">X</a>
+    <label>
+      Min
+      <input id="minutes" type="number" min="0" value="2" />
+    </label>
+    <label>
+      Sek
+      <input id="seconds" type="number" min="0" max="59" value="30" />
+    </label>
+    <button id="startBtn" type="button">Start</button>
+    <button id="pauseBtn" type="button">Pavza</button>
+    <button id="resetBtn" type="button">Reset</button>
+    <div class="nav-actions" aria-label="Navigacija pesmi">
+      <a class="back" href="dizem-sidro.html">Prejšnja</a>
+      <a class="back" href="voljim-osmjeh-tvoj.html">Naslednja</a>
+    </div>
+  </header>
+
+  <main class="lyrics" id="lyrics">
+    <h1 class="song-title">Ko se zaljubiš</h1>
+    <section class="lyrics-stack" aria-label="Ko se zaljubiš v slikah">
+      <img src="Pesmi/zaljubis1.png" alt="Ko se zaljubiš 1" />
+      <img src="Pesmi/zaljubis2.png" alt="Ko se zaljubiš 2" />
+      <img src="Pesmi/zaljubis3.png" alt="Ko se zaljubiš 3" />
+      <img src="Pesmi/zaljubis4.png" alt="Ko se zaljubiš 4" />
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

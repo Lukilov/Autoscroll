@@ -1,4 +1,62 @@
 (function () {
+  const SONG_ORDER = [
+    "le-s-teboj.html",
+    "tople-oci.html",
+    "nisem-vazna.html",
+    "dobra-mrha.html",
+    "song.html",
+    "rdeca-masna.html",
+    "najlepse-pesmi.html",
+    "komar.html",
+    "ko-pa-prides-ti.html",
+    "za-dobra-stara-vremena.html",
+    "rad-bi-ti-rekel-nekaj-lepega.html",
+    "povej-mi-marina.html",
+    "solza-kane-mi.html",
+    "mi-plesemo.html",
+    "soba-102.html",
+    "hej-duso-ko-nam-brani.html",
+    "za-prijatelje.html",
+    "dizem-sidro.html",
+    "ko-se-zaljubis.html",
+    "voljim-osmjeh-tvoj.html",
+    "jagode-in-cokolada.html",
+    "ako-su-to-samo-bile-lazi.html",
+    "dez-naj-pada.html",
+    "cela-ulica-nori.html",
+    "lagala-nas-mala.html",
+    "cao-lepa.html",
+    "moja-mama-je-strela.html",
+    "cas-bo-zacelil-svet.html",
+    "stara-dobra.html"
+  ];
+
+  function initializeSongNavigation() {
+    const navActions = document.querySelector(".nav-actions");
+    if (!navActions) {
+      return;
+    }
+
+    const navLinks = navActions.querySelectorAll("a.back");
+    if (navLinks.length < 2) {
+      return;
+    }
+
+    const currentSong = window.location.pathname.split("/").pop();
+    const currentIndex = SONG_ORDER.indexOf(currentSong);
+    if (currentIndex === -1) {
+      return;
+    }
+
+    const previousIndex = (currentIndex - 1 + SONG_ORDER.length) % SONG_ORDER.length;
+    const nextIndex = (currentIndex + 1) % SONG_ORDER.length;
+
+    navLinks[0].setAttribute("href", SONG_ORDER[previousIndex]);
+    navLinks[1].setAttribute("href", SONG_ORDER[nextIndex]);
+  }
+
+  initializeSongNavigation();
+
   const minutesInput = document.getElementById("minutes");
   const secondsInput = document.getElementById("seconds");
   const startBtn = document.getElementById("startBtn");

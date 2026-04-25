@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nisem važna - AutoScroll</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="controls" role="region" aria-label="Auto scroll kontrole">
+    <a class="back exit" href="index.html">X</a>
+    <label>
+      Min
+      <input id="minutes" type="number" min="0" value="2" />
+    </label>
+    <label>
+      Sek
+      <input id="seconds" type="number" min="0" max="59" value="30" />
+    </label>
+    <button id="startBtn" type="button">Start</button>
+    <button id="pauseBtn" type="button">Pavza</button>
+    <button id="resetBtn" type="button">Reset</button>
+    <div class="nav-actions" aria-label="Navigacija pesmi">
+      <a class="back" href="tople-oci.html">Prejšnja</a>
+      <a class="back" href="dobra-mrha.html">Naslednja</a>
+    </div>
+  </header>
+
+  <main class="lyrics" id="lyrics">
+    <h1 class="song-title">Nisem važna</h1>
+    <section class="lyrics-stack" aria-label="Nisem važna v slikah">
+      <img src="Pesmi/nisemvazna1.png" alt="Nisem važna 1" />
+      <img src="Pesmi/nisemvazna2.png" alt="Nisem važna 2" />
+      <img src="Pesmi/nisemvazna3.png" alt="Nisem važna 3" />
+      <img src="Pesmi/nisemvazna4.png" alt="Nisem važna 4" />
+      <img src="Pesmi/nisemvazna5.png" alt="Nisem važna 5" />
+      <img src="Pesmi/nisemvazna6.png" alt="Nisem važna 6" />
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,35 +1,93 @@
 (function () {
-  const SONG_ORDER = [
-    "le-s-teboj.html",
-    "tople-oci.html",
-    "nisem-vazna.html",
-    "dobra-mrha.html",
-    "song.html",
-    "rdeca-masna.html",
-    "najlepse-pesmi.html",
-    "komar.html",
-    "ko-pa-prides-ti.html",
-    "za-dobra-stara-vremena.html",
-    "rad-bi-ti-rekel-nekaj-lepega.html",
-    "povej-mi-marina.html",
-    "solza-kane-mi.html",
-    "mi-plesemo.html",
-    "soba-102.html",
-    "hej-duso-ko-nam-brani.html",
-    "za-prijatelje.html",
-    "dizem-sidro.html",
-    "ko-se-zaljubis.html",
-    "voljim-osmjeh-tvoj.html",
-    "jagode-in-cokolada.html",
-    "ako-su-to-samo-bile-lazi.html",
-    "dez-naj-pada.html",
-    "cela-ulica-nori.html",
-    "lagala-nas-mala.html",
-    "cao-lepa.html",
-    "moja-mama-je-strela.html",
-    "cas-bo-zacelil-svet.html",
-    "stara-dobra.html"
-  ];
+  const PLAYLISTS = {
+    maturanc: [
+      { id: "le-s-teboj", file: "le-s-teboj.html" },
+      { id: "tople-oci", file: "tople-oci.html" },
+      { id: "nisem-vazna", file: "nisem-vazna.html" },
+      { id: "dobra-mrha", file: "dobra-mrha.html" },
+      { id: "song", file: "song.html" },
+      { id: "rdeca-masna", file: "rdeca-masna.html" },
+      { id: "najlepse-pesmi", file: "najlepse-pesmi.html" },
+      { id: "komar", file: "komar.html" },
+      { id: "ko-pa-prides-ti", file: "ko-pa-prides-ti.html" },
+      { id: "za-dobra-stara-vremena", file: "za-dobra-stara-vremena.html" },
+      { id: "rad-bi-ti-rekel-nekaj-lepega", file: "rad-bi-ti-rekel-nekaj-lepega.html" },
+      { id: "povej-mi-marina", file: "povej-mi-marina.html" },
+      { id: "solza-kane-mi", file: "solza-kane-mi.html" },
+      { id: "mi-plesemo", file: "mi-plesemo.html" },
+      { id: "soba-102", file: "soba-102.html" },
+      { id: "hej-duso-ko-nam-brani", file: "hej-duso-ko-nam-brani.html" },
+      { id: "za-prijatelje", file: "za-prijatelje.html" },
+      { id: "dizem-sidro", file: "dizem-sidro.html" },
+      { id: "ko-se-zaljubis", file: "ko-se-zaljubis.html" },
+      { id: "voljim-osmjeh-tvoj", file: "voljim-osmjeh-tvoj.html" },
+      { id: "jagode-in-cokolada", file: "jagode-in-cokolada.html" },
+      { id: "ako-su-to-samo-bile-lazi", file: "ako-su-to-samo-bile-lazi.html" },
+      { id: "dez-naj-pada", file: "dez-naj-pada.html" },
+      { id: "cela-ulica-nori", file: "cela-ulica-nori.html" },
+      { id: "lagala-nas-mala", file: "lagala-nas-mala.html" },
+      { id: "cao-lepa", file: "cao-lepa.html" },
+      { id: "moja-mama-je-strela", file: "moja-mama-je-strela.html" },
+      { id: "cas-bo-zacelil-svet", file: "cas-bo-zacelil-svet.html" },
+      { id: "stara-dobra", file: "stara-dobra.html" }
+    ],
+    pesmi2: [
+      { id: "tople-oci", file: "tople-oci.html" },
+      { id: "le-s-teboj", file: "le-s-teboj.html" },
+      { id: "nisem-vazna", file: "nisem-vazna.html" },
+      { id: "za-prijatelje", file: "za-prijatelje.html" },
+      { id: "dobra-vila", file: "dobra-mrha.html" },
+      { id: "song", file: "song.html" },
+      { id: "mi-plesemo", file: "mi-plesemo.html" },
+      { id: "ko-se-zaljubis", file: "ko-se-zaljubis.html" },
+      { id: "rdeca-masna", file: "rdeca-masna.html" },
+      { id: "najlepse-pesmi", file: "najlepse-pesmi.html" },
+      { id: "voljim-osmjeh-tvoj", file: "voljim-osmjeh-tvoj.html" },
+      { id: "komar", file: "komar.html" },
+      { id: "ko-pa-prides-ti", file: "ko-pa-prides-ti.html" },
+      { id: "jagode-in-cokolada", file: "jagode-in-cokolada.html" },
+      { id: "povej-mi-marina", file: "povej-mi-marina.html" },
+      { id: "stara-dobra", file: "stara-dobra.html" },
+      { id: "ako-su-to-samo-bile-lazi", file: "ako-su-to-samo-bile-lazi.html" },
+      { id: "za-dobra-stara-vremena", file: "za-dobra-stara-vremena.html" },
+      { id: "rad-bi-ti-rekel-nekaj-lepega", file: "rad-bi-ti-rekel-nekaj-lepega.html" },
+      { id: "soba-102", file: "soba-102.html" },
+      { id: "cela-ulica-nori", file: "cela-ulica-nori.html" },
+      { id: "lagala-nas-mala", file: "lagala-nas-mala.html" },
+      { id: "cao-lepa", file: "cao-lepa.html" },
+      { id: "moja-mama-je-strela", file: "moja-mama-je-strela.html" },
+      { id: "cas-bo-zacelil-svet", file: "cas-bo-zacelil-svet.html" },
+      { id: "dizem-sidro", file: "dizem-sidro.html" },
+      { id: "dobra-mrha", file: "dobra-mrha.html" },
+      { id: "solza-kane-mi", file: "solza-kane-mi.html" }
+    ]
+  };
+
+  function resolvePlaylistKey() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("list") === "2" ? "pesmi2" : "maturanc";
+  }
+
+  function buildSongHref(song, playlistKey) {
+    if (playlistKey === "pesmi2") {
+      return `${song.file}?list=2&song=${encodeURIComponent(song.id)}`;
+    }
+    return song.file;
+  }
+
+  function resolveCurrentSongId(songOrder) {
+    const params = new URLSearchParams(window.location.search);
+    const songFromQuery = params.get("song");
+    if (songFromQuery) {
+      return songFromQuery;
+    }
+
+    const currentSongFile = window.location.pathname.split("/").pop();
+    const song = songOrder.find(function (item) {
+      return item.file === currentSongFile;
+    });
+    return song ? song.id : null;
+  }
 
   function initializeSongNavigation() {
     const navActions = document.querySelector(".nav-actions");
@@ -42,17 +100,26 @@
       return;
     }
 
-    const currentSong = window.location.pathname.split("/").pop();
-    const currentIndex = SONG_ORDER.indexOf(currentSong);
+    const playlistKey = resolvePlaylistKey();
+    const songOrder = PLAYLISTS[playlistKey];
+    const currentSongId = resolveCurrentSongId(songOrder);
+    const currentIndex = songOrder.findIndex(function (song) {
+      return song.id === currentSongId;
+    });
     if (currentIndex === -1) {
       return;
     }
 
-    const previousIndex = (currentIndex - 1 + SONG_ORDER.length) % SONG_ORDER.length;
-    const nextIndex = (currentIndex + 1) % SONG_ORDER.length;
+    const previousIndex = (currentIndex - 1 + songOrder.length) % songOrder.length;
+    const nextIndex = (currentIndex + 1) % songOrder.length;
 
-    navLinks[0].setAttribute("href", SONG_ORDER[previousIndex]);
-    navLinks[1].setAttribute("href", SONG_ORDER[nextIndex]);
+    navLinks[0].setAttribute("href", buildSongHref(songOrder[previousIndex], playlistKey));
+    navLinks[1].setAttribute("href", buildSongHref(songOrder[nextIndex], playlistKey));
+
+    const exitLink = document.querySelector("a.back.exit");
+    if (exitLink) {
+      exitLink.setAttribute("href", playlistKey === "pesmi2" ? "pesmi-2.html" : "index.html");
+    }
   }
 
   initializeSongNavigation();

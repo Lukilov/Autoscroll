@@ -34,6 +34,28 @@ h1 {
   text-align: center;
 }
 
+.playlist-switch {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.playlist-btn {
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 8px 14px;
+  color: var(--accent);
+  background: #fff;
+  font-weight: 600;
+}
+
+.playlist-btn.active {
+  color: #fff;
+  background: var(--accent);
+}
+
 .song-card {
   display: flex;
   flex-direction: column;
